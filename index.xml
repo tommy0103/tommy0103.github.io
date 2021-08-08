@@ -24,110 +24,110 @@
 &lt;h3 id=&#34;quick-start&#34;&gt;Quick Start&lt;/h3&gt;
 &lt;p&gt;安装 &lt;code&gt;Git Bash&lt;/code&gt;，下载 &lt;code&gt;Hugo extended Windows&lt;/code&gt;，并正确设置环境变量。&lt;/p&gt;
 &lt;p&gt;选择路径 &lt;code&gt;dir&lt;/code&gt; 作为 Hugo Blog 的存储路径。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; dir
+&lt;pre&gt;&lt;code&gt;cd dir
 hugo new site .
 git init
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;如果没有报错的话，&lt;code&gt;dir&lt;/code&gt; 内是这样的：&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;如果没有报错的话，&lt;code&gt;dir&lt;/code&gt; 内是这样的：&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;archetypes/  content/    static/  config.toml  data/     
 layouts/     resources/  themes/
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;这里简要的说明一下，&lt;code&gt;themes&lt;/code&gt; 用于接下来存放选择的主题，而 &lt;code&gt;config.toml&lt;/code&gt; 是 blog 的配置文件。注意 &lt;code&gt;hugo&lt;/code&gt; 是没有默认主题的，因此需要手动选择主题。&lt;/p&gt;
 &lt;p&gt;在&lt;a href=&#34;https://themes.gohugo.io/&#34;&gt;官方网站&lt;/a&gt;上选择中意的主题后 &lt;code&gt;clone&lt;/code&gt; 下来。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;git clone https://github.com/AmazingRise/hugo-theme-diary themes/diary
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;改一改配置文件，或者直接用 &lt;code&gt;themes/diary/exampleSite/config.toml&lt;/code&gt;，这里给出我的配置文件&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;baseURL = &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;https://tommy0103.github.io/&amp;#34;&lt;/span&gt;
-DefaultContentLanguage = &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;zh&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#228b22&#34;&gt;# Theme&amp;#39;s display language, supports: en, fr, zh, zh-hant&lt;/span&gt;
-languageCode = &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;zh-CN&amp;#34;&lt;/span&gt;
-title = &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Candy Life&amp;#34;&lt;/span&gt;
-copyright = &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;tommy0103，本站遵循 CC BY-NC-SA 4.0 协议&amp;#34;&lt;/span&gt;
-theme = &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;diary&amp;#34;&lt;/span&gt;
-&lt;span style=&#34;color:#228b22&#34;&gt;# googleAnalytics = &amp;#34;UA-154017714-2&amp;#34;&lt;/span&gt;
+&lt;pre&gt;&lt;code&gt;git clone https://github.com/AmazingRise/hugo-theme-diary themes/diary
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;改一改配置文件，或者直接用 &lt;code&gt;themes/diary/exampleSite/config.toml&lt;/code&gt;，这里给出我的配置文件&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;baseURL = &amp;quot;https://tommy0103.github.io/&amp;quot;
+DefaultContentLanguage = &amp;quot;zh&amp;quot; # Theme&#39;s display language, supports: en, fr, zh, zh-hant
+languageCode = &amp;quot;zh-CN&amp;quot;
+title = &amp;quot;Candy Life&amp;quot;
+copyright = &amp;quot;tommy0103，本站遵循 CC BY-NC-SA 4.0 协议&amp;quot;
+theme = &amp;quot;diary&amp;quot;
+# googleAnalytics = &amp;quot;UA-154017714-2&amp;quot;
 
-hasCJKLanguage = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;true&lt;/span&gt;
-&lt;span style=&#34;color:#228b22&#34;&gt;# googleAnalytics = &amp;#34;UA-123-45&amp;#34;&lt;/span&gt;
+hasCJKLanguage = true
+# googleAnalytics = &amp;quot;UA-123-45&amp;quot;
 
 [markup]
   [markup.highlight]
-    codeFences = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;true&lt;/span&gt;
-    guessSyntax = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;false&lt;/span&gt;
-    hl_Lines = &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;
-    lineNoStart = &lt;span style=&#34;color:#b452cd&#34;&gt;1&lt;/span&gt;
-    lineNos = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;false&lt;/span&gt;
-    lineNumbersInTable = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;true&lt;/span&gt;
-    noClasses = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;true&lt;/span&gt;
-    style = &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;perldoc&amp;#34;&lt;/span&gt;
-    tabWidth = &lt;span style=&#34;color:#b452cd&#34;&gt;4&lt;/span&gt;
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = &amp;quot;&amp;quot;
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = true
+    noClasses = true
+    style = &amp;quot;perldoc&amp;quot;
+    tabWidth = 4
 
 [params]
-subtitle = &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Some thinking.&amp;#34;&lt;/span&gt;
-enableGitalk = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;true&lt;/span&gt;
-enableMathJax = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;true&lt;/span&gt;
-enableAutoDarkMode = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;true&lt;/span&gt;
-enableReadingTime = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;true&lt;/span&gt;
-customCSS = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;true&lt;/span&gt;
-customJS = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;true&lt;/span&gt;
+subtitle = &amp;quot;Some thinking.&amp;quot;
+enableGitalk = true
+enableMathJax = true
+enableAutoDarkMode = true
+enableReadingTime = true
+customCSS = true
+customJS = true
 
-&lt;span style=&#34;color:#228b22&#34;&gt;# Twitter Card and Open Graph settings&lt;/span&gt;
-enableOpenGraph = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;true&lt;/span&gt;
-enableTwitterCards = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;true&lt;/span&gt;
-title = &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Candy Life&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#228b22&#34;&gt;# will set &amp;#39;og:site_name&amp;#39;&lt;/span&gt;
-description = &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;My HomePage Description&amp;#34;&lt;/span&gt;  &lt;span style=&#34;color:#228b22&#34;&gt;# will set &amp;#39;og:description&amp;#39;&lt;/span&gt;
+# Twitter Card and Open Graph settings
+enableOpenGraph = true
+enableTwitterCards = true
+title = &amp;quot;Candy Life&amp;quot; # will set &#39;og:site_name&#39;
+description = &amp;quot;My HomePage Description&amp;quot;  # will set &#39;og:description&#39;
 
 [params.gitalk]
-  owner = &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;tommy0103&amp;#34;&lt;/span&gt;
-  repo = &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;blog_comment&amp;#34;&lt;/span&gt;
-  client_id = &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;secret&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#228b22&#34;&gt;# need your own client_id instead of &amp;#34;secret&amp;#34;&lt;/span&gt;
-  client_secret = &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;secret&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#228b22&#34;&gt;# need your own client_secret instead of &amp;#34;secret&amp;#34;&lt;/span&gt;
+  owner = &amp;quot;tommy0103&amp;quot;
+  repo = &amp;quot;blog_comment&amp;quot;
+  client_id = &amp;quot;secret&amp;quot; # need your own client_id instead of &amp;quot;secret&amp;quot;
+  client_secret = &amp;quot;secret&amp;quot; # need your own client_secret instead of &amp;quot;secret&amp;quot;
 [taxonomies]
-   tag = &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;tags&amp;#34;&lt;/span&gt;
-   sections = &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;sections&amp;#34;&lt;/span&gt;
-   series = &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;series&amp;#34;&lt;/span&gt;
-   category = &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;categories&amp;#34;&lt;/span&gt;
+   tag = &amp;quot;tags&amp;quot;
+   sections = &amp;quot;sections&amp;quot;
+   series = &amp;quot;series&amp;quot;
+   category = &amp;quot;categories&amp;quot;
 
-&lt;span style=&#34;color:#228b22&#34;&gt;# [[menu.main]]&lt;/span&gt;
-&lt;span style=&#34;color:#228b22&#34;&gt;# url = &amp;#34;/categories/&amp;#34;&lt;/span&gt;
-&lt;span style=&#34;color:#228b22&#34;&gt;# name = &amp;#34;Categories&amp;#34;&lt;/span&gt;
-&lt;span style=&#34;color:#228b22&#34;&gt;# weight = 2&lt;/span&gt;
+# [[menu.main]]
+# url = &amp;quot;/categories/&amp;quot;
+# name = &amp;quot;Categories&amp;quot;
+# weight = 2
 [[menu.main]]
-url = &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;/posts/&amp;#34;&lt;/span&gt;
-name = &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Archive&amp;#34;&lt;/span&gt;
-weight = &lt;span style=&#34;color:#b452cd&#34;&gt;1&lt;/span&gt;
+url = &amp;quot;/posts/&amp;quot;
+name = &amp;quot;Archive&amp;quot;
+weight = 1
 [[menu.main]]
-url = &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;/tags/&amp;#34;&lt;/span&gt;
-name = &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Tags&amp;#34;&lt;/span&gt;
-weight = &lt;span style=&#34;color:#b452cd&#34;&gt;3&lt;/span&gt;
+url = &amp;quot;/tags/&amp;quot;
+name = &amp;quot;Tags&amp;quot;
+weight = 3
 [[menu.main]]
-url = &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;/friends/&amp;#34;&lt;/span&gt;
-name = &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;Friends&amp;#34;&lt;/span&gt;
-weight = &lt;span style=&#34;color:#b452cd&#34;&gt;4&lt;/span&gt;
+url = &amp;quot;/friends/&amp;quot;
+name = &amp;quot;Friends&amp;quot;
+weight = 4
 [[menu.main]]
-url = &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;/about/&amp;#34;&lt;/span&gt;
-name = &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;About&amp;#34;&lt;/span&gt;
-weight = &lt;span style=&#34;color:#b452cd&#34;&gt;4&lt;/span&gt;
+url = &amp;quot;/about/&amp;quot;
+name = &amp;quot;About&amp;quot;
+weight = 4
 [[menu.main]]
-url = &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;/index.xml&amp;#34;&lt;/span&gt;
-name = &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;RSS Feed&amp;#34;&lt;/span&gt;
-weight = &lt;span style=&#34;color:#b452cd&#34;&gt;6&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;还需要新建一个 .md 才能正常生成 blog&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;hugo new posts/first.md
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;现在可以生成 blog 了qwq。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;# Generate static site&lt;/span&gt;
+url = &amp;quot;/index.xml&amp;quot;
+name = &amp;quot;RSS Feed&amp;quot;
+weight = 6
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;还需要新建一个 .md 才能正常生成 blog&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;hugo new posts/first.md
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;现在可以生成 blog 了qwq。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# Generate static site
 hugo -D 
-&lt;span style=&#34;color:#228b22&#34;&gt;# Generate &amp;amp; Preview site just in LAN &lt;/span&gt;
+# Generate &amp;amp; Preview site just in LAN 
 hugo server -D
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;接下来需要部署 blog，即将 blog 放在云服务上运行。
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;接下来需要部署 blog，即将 blog 放在云服务上运行。
 这里 $\texttt{tommy}$ 选择了 &lt;code&gt;Github Pages&lt;/code&gt;，你也可以选择其他的。&lt;/p&gt;
 &lt;p&gt;初次部署需要 &lt;code&gt;init&lt;/code&gt; 以及新建 &lt;code&gt;origin&lt;/code&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;# /dir/deploy.sh&lt;/span&gt;
+&lt;pre&gt;&lt;code&gt;# /dir/deploy.sh
 
-&lt;span style=&#34;color:#228b22&#34;&gt;# if you deploy your blog for the first time&lt;/span&gt;
+# if you deploy your blog for the first time
 git init
 git remote add origin git@github.com:tommy0103/tommy0103.github.io.git
 
-&lt;span style=&#34;color:#228b22&#34;&gt;# for all cases&lt;/span&gt;
+# for all cases
 git add .
-git commit -m &lt;span style=&#34;color:#cd5555&#34;&gt;&amp;#34;msg&amp;#34;&lt;/span&gt;
+git commit -m &amp;quot;msg&amp;quot;
 git push -f --set-upstream origin master
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;到这里部署就告一段落了。可以写一个 &lt;code&gt;.sh&lt;/code&gt; 脚本，这样每次就可以一键部署了。&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;到这里部署就告一段落了。可以写一个 &lt;code&gt;.sh&lt;/code&gt; 脚本，这样每次就可以一键部署了。&lt;/p&gt;
 &lt;h3 id=&#34;some-problem&#34;&gt;Some Problem&lt;/h3&gt;
 &lt;p&gt;整个过程中 $\texttt{tommy}$ 遇到过很多神奇的问题，这里记录一下。&lt;/p&gt;
 &lt;blockquote&gt;
@@ -152,22 +152,22 @@ ssh-keygen -t rsa -C &amp;quot;&amp;quot;
 &lt;/blockquote&gt;
 &lt;p&gt;这个问题很好解决。&lt;/p&gt;
 &lt;p&gt;首先检查是否正确的配置了 &lt;code&gt;config.toml&lt;/code&gt;。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;&lt;span style=&#34;color:#228b22&#34;&gt;# config.toml&lt;/span&gt;
-enableMathJax = &lt;span style=&#34;color:#8b008b;font-weight:bold&#34;&gt;true&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;然后查看 &lt;code&gt;themes/diary/layouts/partials/head.html&lt;/code&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;{{ if or .Site.Params.enableMathJax }}
-  {{ partial &amp;#34;mathjax.html&amp;#34; . }}
+&lt;pre&gt;&lt;code&gt;# config.toml
+enableMathJax = true
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;然后查看 &lt;code&gt;themes/diary/layouts/partials/head.html&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;{{ if or .Site.Params.enableMathJax }}
+  {{ partial &amp;quot;mathjax.html&amp;quot; . }}
 {{ end }}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;如果不是这样的，改成这样。&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;如果不是这样的，改成这样。&lt;/p&gt;
 &lt;p&gt;重新 &lt;code&gt;deploy&lt;/code&gt; 就可以正常渲染了。但是 &lt;code&gt;\\&lt;/code&gt; 转义的问题解决不了，所以&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span style=&#34;color:#cd5555&#34;&gt;$$&lt;/span&gt;&lt;span style=&#34;color:#658b00&#34;&gt;
-&lt;/span&gt;&lt;span style=&#34;color:#658b00&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#00688b&#34;&gt;\begin&lt;/span&gt;&lt;span style=&#34;color:#658b00&#34;&gt;{aligned}
-&lt;/span&gt;&lt;span style=&#34;color:#658b00&#34;&gt;e^{i&lt;/span&gt;&lt;span style=&#34;color:#00688b&#34;&gt;\theta&lt;/span&gt;&lt;span style=&#34;color:#658b00&#34;&gt;}&lt;/span&gt;=&lt;span style=&#34;color:#00688b&#34;&gt;\cos&lt;/span&gt;&lt;span style=&#34;color:#658b00&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#00688b&#34;&gt;\theta&lt;/span&gt;&lt;span style=&#34;color:#658b00&#34;&gt; &lt;/span&gt;+&lt;span style=&#34;color:#658b00&#34;&gt; i &lt;/span&gt;&lt;span style=&#34;color:#00688b&#34;&gt;\sin&lt;/span&gt;&lt;span style=&#34;color:#658b00&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#00688b&#34;&gt;\theta&lt;/span&gt;&lt;span style=&#34;color:#658b00&#34;&gt;
-&lt;/span&gt;&lt;span style=&#34;color:#658b00&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#00688b&#34;&gt;\\\\&lt;/span&gt;&lt;span style=&#34;color:#658b00&#34;&gt;
-&lt;/span&gt;&lt;span style=&#34;color:#658b00&#34;&gt;qwq
-&lt;/span&gt;&lt;span style=&#34;color:#658b00&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#00688b&#34;&gt;\end&lt;/span&gt;&lt;span style=&#34;color:#658b00&#34;&gt;{aligned}
-&lt;/span&gt;&lt;span style=&#34;color:#658b00&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#cd5555&#34;&gt;$$&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;只能用 &lt;code&gt;\\\\&lt;/code&gt; 来起到换行的效果（悲&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$$
+\begin{aligned}
+e^{i\theta}=\cos \theta + i \sin \theta
+\\\\
+qwq
+\end{aligned}
+$$
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;只能用 &lt;code&gt;\\\\&lt;/code&gt; 来起到换行的效果（悲&lt;/p&gt;
 - https://tommy0103.github.io/posts/buildblog/ - tommy0103，本站遵循 CC BY-NC-SA 4.0 协议</description>
         </item>
     

@@ -548,7 +548,7 @@ Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> b
                             
                             4 min
                             
-                            42 s.
+                            45 s.
                         
                     </div>
                 </div>
@@ -564,110 +564,110 @@ Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> b
 <h3 id="quick-start">Quick Start</h3>
 <p>安装 <code>Git Bash</code>，下载 <code>Hugo extended Windows</code>，并正确设置环境变量。</p>
 <p>选择路径 <code>dir</code> 作为 Hugo Blog 的存储路径。</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#658b00">cd</span> dir
+<pre><code>cd dir
 hugo new site .
 git init
-</code></pre></div><p>如果没有报错的话，<code>dir</code> 内是这样的：</p>
+</code></pre><p>如果没有报错的话，<code>dir</code> 内是这样的：</p>
 <pre><code>archetypes/  content/    static/  config.toml  data/     
 layouts/     resources/  themes/
 </code></pre><p>这里简要的说明一下，<code>themes</code> 用于接下来存放选择的主题，而 <code>config.toml</code> 是 blog 的配置文件。注意 <code>hugo</code> 是没有默认主题的，因此需要手动选择主题。</p>
 <p>在<a href="https://themes.gohugo.io/">官方网站</a>上选择中意的主题后 <code>clone</code> 下来。</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">git clone https://github.com/AmazingRise/hugo-theme-diary themes/diary
-</code></pre></div><p>改一改配置文件，或者直接用 <code>themes/diary/exampleSite/config.toml</code>，这里给出我的配置文件</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">baseURL = <span style="color:#cd5555">&#34;https://tommy0103.github.io/&#34;</span>
-DefaultContentLanguage = <span style="color:#cd5555">&#34;zh&#34;</span> <span style="color:#228b22"># Theme&#39;s display language, supports: en, fr, zh, zh-hant</span>
-languageCode = <span style="color:#cd5555">&#34;zh-CN&#34;</span>
-title = <span style="color:#cd5555">&#34;Candy Life&#34;</span>
-copyright = <span style="color:#cd5555">&#34;tommy0103，本站遵循 CC BY-NC-SA 4.0 协议&#34;</span>
-theme = <span style="color:#cd5555">&#34;diary&#34;</span>
-<span style="color:#228b22"># googleAnalytics = &#34;UA-154017714-2&#34;</span>
+<pre><code>git clone https://github.com/AmazingRise/hugo-theme-diary themes/diary
+</code></pre><p>改一改配置文件，或者直接用 <code>themes/diary/exampleSite/config.toml</code>，这里给出我的配置文件</p>
+<pre><code>baseURL = &quot;https://tommy0103.github.io/&quot;
+DefaultContentLanguage = &quot;zh&quot; # Theme's display language, supports: en, fr, zh, zh-hant
+languageCode = &quot;zh-CN&quot;
+title = &quot;Candy Life&quot;
+copyright = &quot;tommy0103，本站遵循 CC BY-NC-SA 4.0 协议&quot;
+theme = &quot;diary&quot;
+# googleAnalytics = &quot;UA-154017714-2&quot;
 
-hasCJKLanguage = <span style="color:#8b008b;font-weight:bold">true</span>
-<span style="color:#228b22"># googleAnalytics = &#34;UA-123-45&#34;</span>
+hasCJKLanguage = true
+# googleAnalytics = &quot;UA-123-45&quot;
 
 [markup]
   [markup.highlight]
-    codeFences = <span style="color:#8b008b;font-weight:bold">true</span>
-    guessSyntax = <span style="color:#8b008b;font-weight:bold">false</span>
-    hl_Lines = <span style="color:#cd5555">&#34;&#34;</span>
-    lineNoStart = <span style="color:#b452cd">1</span>
-    lineNos = <span style="color:#8b008b;font-weight:bold">false</span>
-    lineNumbersInTable = <span style="color:#8b008b;font-weight:bold">true</span>
-    noClasses = <span style="color:#8b008b;font-weight:bold">true</span>
-    style = <span style="color:#cd5555">&#34;perldoc&#34;</span>
-    tabWidth = <span style="color:#b452cd">4</span>
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = &quot;&quot;
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = true
+    noClasses = true
+    style = &quot;perldoc&quot;
+    tabWidth = 4
 
 [params]
-subtitle = <span style="color:#cd5555">&#34;Some thinking.&#34;</span>
-enableGitalk = <span style="color:#8b008b;font-weight:bold">true</span>
-enableMathJax = <span style="color:#8b008b;font-weight:bold">true</span>
-enableAutoDarkMode = <span style="color:#8b008b;font-weight:bold">true</span>
-enableReadingTime = <span style="color:#8b008b;font-weight:bold">true</span>
-customCSS = <span style="color:#8b008b;font-weight:bold">true</span>
-customJS = <span style="color:#8b008b;font-weight:bold">true</span>
+subtitle = &quot;Some thinking.&quot;
+enableGitalk = true
+enableMathJax = true
+enableAutoDarkMode = true
+enableReadingTime = true
+customCSS = true
+customJS = true
 
-<span style="color:#228b22"># Twitter Card and Open Graph settings</span>
-enableOpenGraph = <span style="color:#8b008b;font-weight:bold">true</span>
-enableTwitterCards = <span style="color:#8b008b;font-weight:bold">true</span>
-title = <span style="color:#cd5555">&#34;Candy Life&#34;</span> <span style="color:#228b22"># will set &#39;og:site_name&#39;</span>
-description = <span style="color:#cd5555">&#34;My HomePage Description&#34;</span>  <span style="color:#228b22"># will set &#39;og:description&#39;</span>
+# Twitter Card and Open Graph settings
+enableOpenGraph = true
+enableTwitterCards = true
+title = &quot;Candy Life&quot; # will set 'og:site_name'
+description = &quot;My HomePage Description&quot;  # will set 'og:description'
 
 [params.gitalk]
-  owner = <span style="color:#cd5555">&#34;tommy0103&#34;</span>
-  repo = <span style="color:#cd5555">&#34;blog_comment&#34;</span>
-  client_id = <span style="color:#cd5555">&#34;secret&#34;</span> <span style="color:#228b22"># need your own client_id instead of &#34;secret&#34;</span>
-  client_secret = <span style="color:#cd5555">&#34;secret&#34;</span> <span style="color:#228b22"># need your own client_secret instead of &#34;secret&#34;</span>
+  owner = &quot;tommy0103&quot;
+  repo = &quot;blog_comment&quot;
+  client_id = &quot;secret&quot; # need your own client_id instead of &quot;secret&quot;
+  client_secret = &quot;secret&quot; # need your own client_secret instead of &quot;secret&quot;
 [taxonomies]
-   tag = <span style="color:#cd5555">&#34;tags&#34;</span>
-   sections = <span style="color:#cd5555">&#34;sections&#34;</span>
-   series = <span style="color:#cd5555">&#34;series&#34;</span>
-   category = <span style="color:#cd5555">&#34;categories&#34;</span>
+   tag = &quot;tags&quot;
+   sections = &quot;sections&quot;
+   series = &quot;series&quot;
+   category = &quot;categories&quot;
 
-<span style="color:#228b22"># [[menu.main]]</span>
-<span style="color:#228b22"># url = &#34;/categories/&#34;</span>
-<span style="color:#228b22"># name = &#34;Categories&#34;</span>
-<span style="color:#228b22"># weight = 2</span>
+# [[menu.main]]
+# url = &quot;/categories/&quot;
+# name = &quot;Categories&quot;
+# weight = 2
 [[menu.main]]
-url = <span style="color:#cd5555">&#34;/posts/&#34;</span>
-name = <span style="color:#cd5555">&#34;Archive&#34;</span>
-weight = <span style="color:#b452cd">1</span>
+url = &quot;/posts/&quot;
+name = &quot;Archive&quot;
+weight = 1
 [[menu.main]]
-url = <span style="color:#cd5555">&#34;/tags/&#34;</span>
-name = <span style="color:#cd5555">&#34;Tags&#34;</span>
-weight = <span style="color:#b452cd">3</span>
+url = &quot;/tags/&quot;
+name = &quot;Tags&quot;
+weight = 3
 [[menu.main]]
-url = <span style="color:#cd5555">&#34;/friends/&#34;</span>
-name = <span style="color:#cd5555">&#34;Friends&#34;</span>
-weight = <span style="color:#b452cd">4</span>
+url = &quot;/friends/&quot;
+name = &quot;Friends&quot;
+weight = 4
 [[menu.main]]
-url = <span style="color:#cd5555">&#34;/about/&#34;</span>
-name = <span style="color:#cd5555">&#34;About&#34;</span>
-weight = <span style="color:#b452cd">4</span>
+url = &quot;/about/&quot;
+name = &quot;About&quot;
+weight = 4
 [[menu.main]]
-url = <span style="color:#cd5555">&#34;/index.xml&#34;</span>
-name = <span style="color:#cd5555">&#34;RSS Feed&#34;</span>
-weight = <span style="color:#b452cd">6</span>
-</code></pre></div><p>还需要新建一个 .md 才能正常生成 blog</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">hugo new posts/first.md
-</code></pre></div><p>现在可以生成 blog 了qwq。</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#228b22"># Generate static site</span>
+url = &quot;/index.xml&quot;
+name = &quot;RSS Feed&quot;
+weight = 6
+</code></pre><p>还需要新建一个 .md 才能正常生成 blog</p>
+<pre><code>hugo new posts/first.md
+</code></pre><p>现在可以生成 blog 了qwq。</p>
+<pre><code># Generate static site
 hugo -D 
-<span style="color:#228b22"># Generate &amp; Preview site just in LAN </span>
+# Generate &amp; Preview site just in LAN 
 hugo server -D
-</code></pre></div><p>接下来需要部署 blog，即将 blog 放在云服务上运行。
+</code></pre><p>接下来需要部署 blog，即将 blog 放在云服务上运行。
 这里 $\texttt{tommy}$ 选择了 <code>Github Pages</code>，你也可以选择其他的。</p>
 <p>初次部署需要 <code>init</code> 以及新建 <code>origin</code></p>
-<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#228b22"># /dir/deploy.sh</span>
+<pre><code># /dir/deploy.sh
 
-<span style="color:#228b22"># if you deploy your blog for the first time</span>
+# if you deploy your blog for the first time
 git init
 git remote add origin git@github.com:tommy0103/tommy0103.github.io.git
 
-<span style="color:#228b22"># for all cases</span>
+# for all cases
 git add .
-git commit -m <span style="color:#cd5555">&#34;msg&#34;</span>
+git commit -m &quot;msg&quot;
 git push -f --set-upstream origin master
-</code></pre></div><p>到这里部署就告一段落了。可以写一个 <code>.sh</code> 脚本，这样每次就可以一键部署了。</p>
+</code></pre><p>到这里部署就告一段落了。可以写一个 <code>.sh</code> 脚本，这样每次就可以一键部署了。</p>
 <h3 id="some-problem">Some Problem</h3>
 <p>整个过程中 $\texttt{tommy}$ 遇到过很多神奇的问题，这里记录一下。</p>
 <blockquote>
@@ -692,22 +692,22 @@ ssh-keygen -t rsa -C &quot;&quot;
 </blockquote>
 <p>这个问题很好解决。</p>
 <p>首先检查是否正确的配置了 <code>config.toml</code>。</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#228b22"># config.toml</span>
-enableMathJax = <span style="color:#8b008b;font-weight:bold">true</span>
-</code></pre></div><p>然后查看 <code>themes/diary/layouts/partials/head.html</code></p>
-<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{ if or .Site.Params.enableMathJax }}
-  {{ partial &#34;mathjax.html&#34; . }}
+<pre><code># config.toml
+enableMathJax = true
+</code></pre><p>然后查看 <code>themes/diary/layouts/partials/head.html</code></p>
+<pre><code>{{ if or .Site.Params.enableMathJax }}
+  {{ partial &quot;mathjax.html&quot; . }}
 {{ end }}
-</code></pre></div><p>如果不是这样的，改成这样。</p>
+</code></pre><p>如果不是这样的，改成这样。</p>
 <p>重新 <code>deploy</code> 就可以正常渲染了。但是 <code>\\</code> 转义的问题解决不了，所以</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-latex" data-lang="latex"><span style="color:#cd5555">$$</span><span style="color:#658b00">
-</span><span style="color:#658b00"></span><span style="color:#00688b">\begin</span><span style="color:#658b00">{aligned}
-</span><span style="color:#658b00">e^{i</span><span style="color:#00688b">\theta</span><span style="color:#658b00">}</span>=<span style="color:#00688b">\cos</span><span style="color:#658b00"> </span><span style="color:#00688b">\theta</span><span style="color:#658b00"> </span>+<span style="color:#658b00"> i </span><span style="color:#00688b">\sin</span><span style="color:#658b00"> </span><span style="color:#00688b">\theta</span><span style="color:#658b00">
-</span><span style="color:#658b00"></span><span style="color:#00688b">\\\\</span><span style="color:#658b00">
-</span><span style="color:#658b00">qwq
-</span><span style="color:#658b00"></span><span style="color:#00688b">\end</span><span style="color:#658b00">{aligned}
-</span><span style="color:#658b00"></span><span style="color:#cd5555">$$</span>
-</code></pre></div><p>只能用 <code>\\\\</code> 来起到换行的效果（悲</p>
+<pre><code>$$
+\begin{aligned}
+e^{i\theta}=\cos \theta + i \sin \theta
+\\\\
+qwq
+\end{aligned}
+$$
+</code></pre><p>只能用 <code>\\\\</code> 来起到换行的效果（悲</p>
 
                     
                     <HR width="100%" id="EOF">
