@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Series on Candy Life</title>
+    <link>https://tommy0103.github.io/series/</link>
+    <description>Recent content in Series on Candy Life</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <copyright>tommy0103，本站遵循 CC BY-NC-SA 4.0 协议</copyright><atom:link href="https://tommy0103.github.io/series/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>
