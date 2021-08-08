@@ -17,7 +17,7 @@
 
 
 <meta property="og:title" content="简单多项式" />
-<meta property="og:description" content="容易想到直接枚举树 $$ \sum_T\left(\prod_{i=1}^na_i^{d_i}d_i^m\right)\left(\sum_{i=1}^nd_i^m\right) $$ $$ \sum_T\sum_{i=1}^n a_i^{d_i}d_i^{2m}\prod_{j\neq i}a_j^{d_j}d_j^m $$ 运用 $\mathrm{Prufer}$ 序列这一工具 $$ \sum_{i=1}^n\sum_{\sum k_j=n-2}\frac{(n-2)!}{\prod k_j!}a_i^{k_i&#43;1}(k_i&#43;1)^{2m}\prod_{j\neq i}(a_j^{k_j&#43;1}(k_j&#43;1)^m) $$ $$ (n-2)!\left(\prod_{j=1}^n a_j\right)\sum_{i=1}^n\sum_{\sum k_j=n-2}\frac{a_i^{k_i}(k_i&#43;1)^{2m}}{k_i!}\prod_{j\neq i}\frac{a_j^{k_j}(k_j&#43;1)^m}{k_j!} $$ 设 $$ \begin{aligned} \left[{z^n}\right]F_i(z)&amp;=\frac{a_i^n(n&#43;1)^{2m}}{n!} \ \left[{z^n}\right]G_i(z)&amp;=\frac{a_i^n(n&#43;1)^m}{n!} \end{aligned} $$ 将非常数项写成卷积形式 $$ \left[{z^{n-2}}\right]\sum_{i=1}^n\frac{F_i(z)}{G_i(z)}\left(\prod_{i=1}^nG_i(z)\right) $$ 问题变为快速求解这个" />
+<meta property="og:description" content="容易想到直接枚举树 $$ \sum_T\left(\prod_{i=1}^na_i^{d_i}d_i^m\right)\left(\sum_{i=1}^nd_i^m\right) $$ $$ \sum_T\sum_{i=1}^n a_i^{d_i}d_i^{2m}\prod_{j\neq i}a_j^{d_j}d_j^m $$ 运用 $\mathrm{Prufer}$ 序列这一工具 $$ \sum_{i=1}^n\sum_{\sum k_j=n-2}\frac{(n-2)!}{\prod k_j!}a_i^{k_i&#43;1}(k_i&#43;1)^{2m}\prod_{j\neq i}(a_j^{k_j&#43;1}(k_j&#43;1)^m) $$ $$ (n-2)!\left(\prod_{j=1}^n a_j\right)\sum_{i=1}^n\sum_{\sum k_j=n-2}\frac{a_i^{k_i}(k_i&#43;1)^{2m}}{k_i!}\prod_{j\neq i}\frac{a_j^{k_j}(k_j&#43;1)^m}{k_j!} $$ 设 $$ \begin{aligned} \left[{z^n}\right]F_i(z)&amp;=\frac{a_i^n(n&#43;1)^{2m}}{n!} \\ \left[{z^n}\right]G_i(z)&amp;=\frac{a_i^n(n&#43;1)^m}{n!} \end{aligned} $$ 将非常数项写成卷积形式 $$ \left[{z^{n-2}}\right]\sum_{i=1}^n\frac{F_i(z)}{G_i(z)}\left(\prod_{i=1}^nG_i(z)\right) $$ 问题变为快速求解这个" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://tommy0103.github.io/posts/first/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2021-08-08T10:48:38+08:00" />
@@ -30,7 +30,7 @@
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="简单多项式"/>
-<meta name="twitter:description" content="容易想到直接枚举树 $$ \sum_T\left(\prod_{i=1}^na_i^{d_i}d_i^m\right)\left(\sum_{i=1}^nd_i^m\right) $$ $$ \sum_T\sum_{i=1}^n a_i^{d_i}d_i^{2m}\prod_{j\neq i}a_j^{d_j}d_j^m $$ 运用 $\mathrm{Prufer}$ 序列这一工具 $$ \sum_{i=1}^n\sum_{\sum k_j=n-2}\frac{(n-2)!}{\prod k_j!}a_i^{k_i&#43;1}(k_i&#43;1)^{2m}\prod_{j\neq i}(a_j^{k_j&#43;1}(k_j&#43;1)^m) $$ $$ (n-2)!\left(\prod_{j=1}^n a_j\right)\sum_{i=1}^n\sum_{\sum k_j=n-2}\frac{a_i^{k_i}(k_i&#43;1)^{2m}}{k_i!}\prod_{j\neq i}\frac{a_j^{k_j}(k_j&#43;1)^m}{k_j!} $$ 设 $$ \begin{aligned} \left[{z^n}\right]F_i(z)&amp;=\frac{a_i^n(n&#43;1)^{2m}}{n!} \ \left[{z^n}\right]G_i(z)&amp;=\frac{a_i^n(n&#43;1)^m}{n!} \end{aligned} $$ 将非常数项写成卷积形式 $$ \left[{z^{n-2}}\right]\sum_{i=1}^n\frac{F_i(z)}{G_i(z)}\left(\prod_{i=1}^nG_i(z)\right) $$ 问题变为快速求解这个"/>
+<meta name="twitter:description" content="容易想到直接枚举树 $$ \sum_T\left(\prod_{i=1}^na_i^{d_i}d_i^m\right)\left(\sum_{i=1}^nd_i^m\right) $$ $$ \sum_T\sum_{i=1}^n a_i^{d_i}d_i^{2m}\prod_{j\neq i}a_j^{d_j}d_j^m $$ 运用 $\mathrm{Prufer}$ 序列这一工具 $$ \sum_{i=1}^n\sum_{\sum k_j=n-2}\frac{(n-2)!}{\prod k_j!}a_i^{k_i&#43;1}(k_i&#43;1)^{2m}\prod_{j\neq i}(a_j^{k_j&#43;1}(k_j&#43;1)^m) $$ $$ (n-2)!\left(\prod_{j=1}^n a_j\right)\sum_{i=1}^n\sum_{\sum k_j=n-2}\frac{a_i^{k_i}(k_i&#43;1)^{2m}}{k_i!}\prod_{j\neq i}\frac{a_j^{k_j}(k_j&#43;1)^m}{k_j!} $$ 设 $$ \begin{aligned} \left[{z^n}\right]F_i(z)&amp;=\frac{a_i^n(n&#43;1)^{2m}}{n!} \\ \left[{z^n}\right]G_i(z)&amp;=\frac{a_i^n(n&#43;1)^m}{n!} \end{aligned} $$ 将非常数项写成卷积形式 $$ \left[{z^{n-2}}\right]\sum_{i=1}^n\frac{F_i(z)}{G_i(z)}\left(\prod_{i=1}^nG_i(z)\right) $$ 问题变为快速求解这个"/>
 
 
 
@@ -422,7 +422,7 @@ $$</p>
 <p>$$
 \begin{aligned}
 \left[{z^n}\right]F_i(z)&amp;=\frac{a_i^n(n+1)^{2m}}{n!}
-\<br>
+\\<br>
 \left[{z^n}\right]G_i(z)&amp;=\frac{a_i^n(n+1)^m}{n!}
 \end{aligned}
 $$</p>

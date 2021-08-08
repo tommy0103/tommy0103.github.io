@@ -58,7 +58,7 @@ $$&lt;/p&gt;
 &lt;p&gt;$$
 \begin{aligned}
 \left[{z^n}\right]F_i(z)&amp;amp;=\frac{a_i^n(n+1)^{2m}}{n!}
-\&lt;br&gt;
+\\&lt;br&gt;
 \left[{z^n}\right]G_i(z)&amp;amp;=\frac{a_i^n(n+1)^m}{n!}
 \end{aligned}
 $$&lt;/p&gt;
