@@ -35,12 +35,66 @@
     
     
         <item>
-        <title>First</title>
+        <title>简单多项式</title>
         <link>https://tommy0103.github.io/posts/first/</link>
         <pubDate>Sun, 08 Aug 2021 10:48:38 +0800</pubDate>
         
         <guid>https://tommy0103.github.io/posts/first/</guid>
-        <description>Candy Life https://tommy0103.github.io/posts/first/ -- https://tommy0103.github.io/posts/first/ - tommy0103，本站遵循 CC BY-NC-SA 4.0 协议</description>
+        <description>Candy Life https://tommy0103.github.io/posts/first/ -&lt;p&gt;容易想到直接枚举树&lt;/p&gt;
+&lt;p&gt;$$
+\sum_T\left(\prod_{i=1}^na_i^{d_i}d_i^m\right)\left(\sum_{i=1}^nd_i^m\right)
+$$&lt;/p&gt;
+&lt;p&gt;$$
+\sum_T\sum_{i=1}^n a_i^{d_i}d_i^{2m}\prod_{j\neq i}a_j^{d_j}d_j^m
+$$&lt;/p&gt;
+&lt;p&gt;运用 $\mathrm{Prufer}$ 序列这一工具&lt;/p&gt;
+&lt;p&gt;$$
+\sum_{i=1}^n\sum_{\sum k_j=n-2}\frac{(n-2)!}{\prod k_j!}a_i^{k_i+1}(k_i+1)^{2m}\prod_{j\neq i}(a_j^{k_j+1}(k_j+1)^m)
+$$&lt;/p&gt;
+&lt;p&gt;$$
+(n-2)!\left(\prod_{j=1}^n a_j\right)\sum_{i=1}^n\sum_{\sum k_j=n-2}\frac{a_i^{k_i}(k_i+1)^{2m}}{k_i!}\prod_{j\neq i}\frac{a_j^{k_j}(k_j+1)^m}{k_j!}
+$$&lt;/p&gt;
+&lt;p&gt;设&lt;/p&gt;
+&lt;p&gt;$$
+\begin{aligned}
+\left[{z^n}\right]F_i(z)&amp;amp;=\frac{a_i^n(n+1)^{2m}}{n!}
+\&lt;br&gt;
+\left[{z^n}\right]G_i(z)&amp;amp;=\frac{a_i^n(n+1)^m}{n!}
+\end{aligned}
+$$&lt;/p&gt;
+&lt;p&gt;将非常数项写成卷积形式&lt;/p&gt;
+&lt;p&gt;$$
+\left[{z^{n-2}}\right]\sum_{i=1}^n\frac{F_i(z)}{G_i(z)}\left(\prod_{i=1}^nG_i(z)\right)
+$$&lt;/p&gt;
+&lt;p&gt;问题变为快速求解这个卷积。设&lt;/p&gt;
+&lt;p&gt;$$
+F(z)=\sum_{n=0} \frac{(n+1)^{2m}}{n!}z^n,G(z)=\sum_{n=0}\frac{(n+1)^m}{n!}z^n
+$$&lt;/p&gt;
+&lt;p&gt;则有&lt;/p&gt;
+&lt;p&gt;$$
+F_i(z)=F(a_iz),G_i(z)=G(a_iz)
+$$&lt;/p&gt;
+&lt;p&gt;现在需要考虑对于任意&lt;/p&gt;
+&lt;p&gt;$$
+H_i(z)=\sum_{n=0}a_i^nh_nz^n=\frac{1}{1-a_iz}
+$$&lt;/p&gt;
+&lt;p&gt;求解&lt;/p&gt;
+&lt;p&gt;$$
+\begin{aligned}
+\sum_{i=1}^n H_i(z)=\sum_{i=1}^n\frac{1}{1-a_iz}
+\end{aligned}
+$$&lt;/p&gt;
+&lt;p&gt;因为连乘项是 $H_i(z)=\ln G(a_iz)$ 并且 $\exp$ 回原式，而连加项其实是 $H_i(z)=\frac{F(a_iz)}{G(a_iz)}$。对于这两部分都只需要求一遍 $\ln G(z)$ 和 $\frac{F(z)}{G(z)}$。&lt;/p&gt;
+&lt;p&gt;设&lt;/p&gt;
+&lt;p&gt;$$
+u=\prod_{i=1}^n (1-a_iz)
+$$&lt;/p&gt;
+&lt;p&gt;则所求变为&lt;/p&gt;
+&lt;p&gt;$$
+\frac{u&#39;}{u}
+$$&lt;/p&gt;
+&lt;p&gt;使用分治 $\mathrm{NTT}$ 求出 $u$ 的值即可，时间复杂度为 $O(n \log^2 n)$&lt;/p&gt;
+- https://tommy0103.github.io/posts/first/ - tommy0103，本站遵循 CC BY-NC-SA 4.0 协议</description>
         </item>
     
     
