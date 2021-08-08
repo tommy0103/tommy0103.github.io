@@ -548,7 +548,7 @@ Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> b
                             
                             4 min
                             
-                            45 s.
+                            55 s.
                         
                     </div>
                 </div>
@@ -670,6 +670,10 @@ git push -f --set-upstream origin master
 </code></pre><p>到这里部署就告一段落了。可以写一个 <code>.sh</code> 脚本，这样每次就可以一键部署了。</p>
 <h3 id="some-problem">Some Problem</h3>
 <p>整个过程中 $\texttt{tommy}$ 遇到过很多神奇的问题，这里记录一下。</p>
+<blockquote>
+<p>本地预览没有任何问题，在远端提交后浏览 blog 发现网站 style 炸裂</p>
+</blockquote>
+<p>请修改 <code>config.toml</code> 中的 <code>baseUrl</code> 为 blog 地址。</p>
 <blockquote>
 <p>在 <code>git push -f ...</code> 时出现 <code>git@github.com: Permission denied (publickey)</code></p>
 </blockquote>

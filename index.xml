@@ -131,6 +131,10 @@ git push -f --set-upstream origin master
 &lt;h3 id=&#34;some-problem&#34;&gt;Some Problem&lt;/h3&gt;
 &lt;p&gt;整个过程中 $\texttt{tommy}$ 遇到过很多神奇的问题，这里记录一下。&lt;/p&gt;
 &lt;blockquote&gt;
+&lt;p&gt;本地预览没有任何问题，在远端提交后浏览 blog 发现网站 style 炸裂&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;请修改 &lt;code&gt;config.toml&lt;/code&gt; 中的 &lt;code&gt;baseUrl&lt;/code&gt; 为 blog 地址。&lt;/p&gt;
+&lt;blockquote&gt;
 &lt;p&gt;在 &lt;code&gt;git push -f ...&lt;/code&gt; 时出现 &lt;code&gt;git@github.com: Permission denied (publickey)&lt;/code&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;del&gt;连 &lt;code&gt;rsa&lt;/code&gt; 都没配置你在干什么（tommy：伞兵竟是我自己，senioria：tommy 傻傻配额快用完了&lt;/del&gt;&lt;/p&gt;
@@ -206,7 +210,17 @@ $$
         <pubDate>Sun, 08 Aug 2021 11:38:58 +0800</pubDate>
         
         <guid>https://tommy0103.github.io/about/</guid>
-        <description>Candy Life https://tommy0103.github.io/about/ -- https://tommy0103.github.io/about/ - tommy0103，本站遵循 CC BY-NC-SA 4.0 协议</description>
+        <description>Candy Life https://tommy0103.github.io/about/ -&lt;h3 id=&#34;introduction&#34;&gt;Introduction&lt;/h3&gt;
+&lt;p&gt;嘤，标题这里本来想写一个 &lt;code&gt;关于我&lt;/code&gt;，但突然想到咱不喜欢第一人称的称呼，以及被使用第二人称称呼，所以就不知道该怎么排版了（&lt;del&gt;混沌排版也不错的样子？&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;那么，就开始正式介绍吧。网名是 &lt;code&gt;tommymio&lt;/code&gt;，曾用名 &lt;code&gt;Rodriguez&lt;/code&gt;，&lt;code&gt;tommy0103&lt;/code&gt;（当然现在 Github 上还在用这个），&lt;code&gt;tomioria&lt;/code&gt; 是 cp 名。喜欢被别人称呼是猫猫或是 tommy 什么的，当然也有人叫 &lt;code&gt;tommy姐&lt;/code&gt; 什么的（&lt;del&gt;好害羞啊&lt;/del&gt;）。&lt;code&gt;OIer&lt;/code&gt;，&lt;code&gt;mtf&lt;/code&gt;，键政人，都是能贴在猫猫身上的标签×&lt;/p&gt;
+&lt;p&gt;&lt;del&gt;猫猫大概是在 2020~2021 年觉醒的，之前可能有现实解体什么的（这两者有没有什么关系猫猫不知道啊&lt;/del&gt;）。
+政治光谱方面的话，目前大概是个安那其人，也是个虚无主义者。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://tommy0103.github.io/transflag.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://tommy0103.github.io/MBTI.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;usage&#34;&gt;Usage&lt;/h3&gt;
+&lt;p&gt;以后这个 blog 大概用来存放一些个人向的东西，以及如 &lt;code&gt;subtitle&lt;/code&gt; 所说，&lt;code&gt;Some thinking&lt;/code&gt;，所以并不是什么 &lt;code&gt;OI&lt;/code&gt; 向的 blog，请不要随便点进来乱看（&lt;del&gt;当然你看了，猫猫也不能拿你怎么样&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;关于多项式那篇，那只是测试文章（&lt;/p&gt;
+- https://tommy0103.github.io/about/ - tommy0103，本站遵循 CC BY-NC-SA 4.0 协议</description>
         </item>
     
     
