@@ -25,23 +25,22 @@
 $$&lt;/p&gt;
 &lt;p&gt;不妨设 $i &amp;gt; n-i$&lt;/p&gt;
 &lt;p&gt;$$
-\gcd(n,i)=\gcd(i,n\bmod i)=\gcd(i,n-i)
-\\&lt;br&gt;
-\gcd(n,n-i)=\gcd(i,n-i)
+\begin{aligned}
+\gcd(n,i)&amp;amp;=\gcd(i,n\bmod i)=\gcd(i,n-i) \\&lt;br&gt;
+\gcd(n,n-i)&amp;amp;=\gcd(i,n-i)
+\end{aligned}
 $$&lt;/p&gt;
-&lt;p&gt;设
-$$
-\gcd(n,i)=g
-\\&lt;br&gt;
-n=gk_1,i=gk_2
+&lt;p&gt;设&lt;/p&gt;
+&lt;p&gt;$$
+\gcd(n,i)=g,n=gk_1,i=gk_2
 $$&lt;/p&gt;
 &lt;p&gt;则&lt;/p&gt;
 &lt;p&gt;$$
-n-i=g(k_1-k_2)
-\\&lt;br&gt;
-\gcd(n,n-i)=g\gcd(k_1,k_1-k_2)=\gcd(k_1,k_2)
-\\&lt;br&gt;
-\gcd(n,i)=g\gcd(k_1,k_2)
+\begin{split}
+n-i&amp;amp;=g(k_1-k_2) \\&lt;br&gt;
+\gcd(n,n-i)&amp;amp;=g\gcd(k_1,k_1-k_2)=\gcd(k_1,k_2) \\&lt;br&gt;
+\gcd(n,i)&amp;amp;=g\gcd(k_1,k_2)
+\end{split}
 $$&lt;/p&gt;
 - https://tommy0103.github.io/posts/gcd_palindrome/ - tommy0103，本站遵循 CC BY-NC-SA 4.0 协议</description>
         </item>
