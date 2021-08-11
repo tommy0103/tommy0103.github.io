@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html><head>
-<title>简单多项式</title>
+<title></title>
 
 
 
@@ -16,12 +16,12 @@
 
 
 
-<meta property="og:title" content="简单多项式" />
-<meta property="og:description" content="容易想到直接枚举树 $$ \sum_T\left(\prod_{i=1}^na_i^{d_i}d_i^m\right)\left(\sum_{i=1}^nd_i^m\right) $$ $$ \sum_T\sum_{i=1}^n a_i^{d_i}d_i^{2m}\prod_{j\neq i}a_j^{d_j}d_j^m $$ 运用 $\mathrm{Prufer}$ 序列这一工具 $$ \sum_{i=1}^n\sum_{\sum k_j=n-2}\frac{(n-2)!}{\prod k_j!}a_i^{k_i&#43;1}(k_i&#43;1)^{2m}\prod_{j\neq i}(a_j^{k_j&#43;1}(k_j&#43;1)^m) $$ $$ (n-2)!\left(\prod_{j=1}^n a_j\right)\sum_{i=1}^n\sum_{\sum k_j=n-2}\frac{a_i^{k_i}(k_i&#43;1)^{2m}}{k_i!}\prod_{j\neq i}\frac{a_j^{k_j}(k_j&#43;1)^m}{k_j!} $$ 设 $$ \begin{aligned} \left[{z^n}\right]F_i(z)&amp;=\frac{a_i^n(n&#43;1)^{2m}}{n!} \\ \left[{z^n}\right]G_i(z)&amp;=\frac{a_i^n(n&#43;1)^m}{n!} \end{aligned} $$ 将非常数项写成卷积形式 $$ \left[{z^{n-2}}\right]\sum_{i=1}^n\frac{F_i(z)}{G_i(z)}\left(\prod_{i=1}^nG_i(z)\right) $$ 问题变为快速求解这个" />
+<meta property="og:title" content="" />
+<meta property="og:description" content="求证 $$ \forall n\geq 2,1\leq i&lt;n, \gcd(n,i)=\gcd(n,n-i) $$ 不妨设 $i &gt; n-i$ $$ \gcd(n,i)=\gcd(i,n\bmod i)=\gcd(i,n-i) \ \gcd(n,n-i)=\gcd(i,n-i) $$ 设 $$ \gcd(n,i)=g \ n=gk_1,i=gk_2 $$ 则 $$ n-i=g(k_1-k_2) \ \gcd(n,n-i)=g\gcd(k_1,k_1-k_2)=\gcd(k_1,k_2) \ \gcd(n,i)=g\gcd(k_1,k_2) $$" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://tommy0103.github.io/posts/first/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2021-08-08T10:48:38+08:00" />
-<meta property="article:modified_time" content="2021-08-08T10:48:38+08:00" /><meta property="og:site_name" content="Candy Life" />
+<meta property="og:url" content="https://tommy0103.github.io/posts/gcd_palindrome/" /><meta property="article:section" content="posts" />
+
+<meta property="og:site_name" content="Candy Life" />
 
 
 
@@ -29,8 +29,8 @@
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="简单多项式"/>
-<meta name="twitter:description" content="容易想到直接枚举树 $$ \sum_T\left(\prod_{i=1}^na_i^{d_i}d_i^m\right)\left(\sum_{i=1}^nd_i^m\right) $$ $$ \sum_T\sum_{i=1}^n a_i^{d_i}d_i^{2m}\prod_{j\neq i}a_j^{d_j}d_j^m $$ 运用 $\mathrm{Prufer}$ 序列这一工具 $$ \sum_{i=1}^n\sum_{\sum k_j=n-2}\frac{(n-2)!}{\prod k_j!}a_i^{k_i&#43;1}(k_i&#43;1)^{2m}\prod_{j\neq i}(a_j^{k_j&#43;1}(k_j&#43;1)^m) $$ $$ (n-2)!\left(\prod_{j=1}^n a_j\right)\sum_{i=1}^n\sum_{\sum k_j=n-2}\frac{a_i^{k_i}(k_i&#43;1)^{2m}}{k_i!}\prod_{j\neq i}\frac{a_j^{k_j}(k_j&#43;1)^m}{k_j!} $$ 设 $$ \begin{aligned} \left[{z^n}\right]F_i(z)&amp;=\frac{a_i^n(n&#43;1)^{2m}}{n!} \\ \left[{z^n}\right]G_i(z)&amp;=\frac{a_i^n(n&#43;1)^m}{n!} \end{aligned} $$ 将非常数项写成卷积形式 $$ \left[{z^{n-2}}\right]\sum_{i=1}^n\frac{F_i(z)}{G_i(z)}\left(\prod_{i=1}^nG_i(z)\right) $$ 问题变为快速求解这个"/>
+<meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="求证 $$ \forall n\geq 2,1\leq i&lt;n, \gcd(n,i)=\gcd(n,n-i) $$ 不妨设 $i &gt; n-i$ $$ \gcd(n,i)=\gcd(i,n\bmod i)=\gcd(i,n-i) \ \gcd(n,n-i)=\gcd(i,n-i) $$ 设 $$ \gcd(n,i)=g \ n=gk_1,i=gk_2 $$ 则 $$ n-i=g(k_1-k_2) \ \gcd(n,n-i)=g\gcd(k_1,k_1-k_2)=\gcd(k_1,k_2) \ \gcd(n,i)=g\gcd(k_1,k_2) $$"/>
 
 
 
@@ -372,13 +372,9 @@ Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> b
                 
             >
                 <div class="post-title">
-                    简单多项式
+                    
                     
                     <div class="post-meta">
-                        
-                        <time itemprop="datePublished">
-                            2021-08-08 10:48
-                        </time>
                         
 
                         
@@ -392,9 +388,7 @@ Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> b
                             
 
                             
-                            1 min
-                            
-                            2 s.
+                            9 s.
                         
                     </div>
                 </div>
@@ -404,64 +398,32 @@ Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> b
                 
                 <div class="post-body" v-pre>
                 
-                    <p>容易想到直接枚举树</p>
+                    <p>求证</p>
 <p>$$
-\sum_T\left(\prod_{i=1}^na_i^{d_i}d_i^m\right)\left(\sum_{i=1}^nd_i^m\right)
+\forall n\geq 2,1\leq i&lt;n,
+\gcd(n,i)=\gcd(n,n-i)
 $$</p>
+<p>不妨设 $i &gt; n-i$</p>
 <p>$$
-\sum_T\sum_{i=1}^n a_i^{d_i}d_i^{2m}\prod_{j\neq i}a_j^{d_j}d_j^m
+\gcd(n,i)=\gcd(i,n\bmod i)=\gcd(i,n-i)
+\<br>
+\gcd(n,n-i)=\gcd(i,n-i)
 $$</p>
-<p>运用 $\mathrm{Prufer}$ 序列这一工具</p>
+<p>设
+$$
+\gcd(n,i)=g
+\<br>
+n=gk_1,i=gk_2
+$$</p>
+<p>则</p>
 <p>$$
-\sum_{i=1}^n\sum_{\sum k_j=n-2}\frac{(n-2)!}{\prod k_j!}a_i^{k_i+1}(k_i+1)^{2m}\prod_{j\neq i}(a_j^{k_j+1}(k_j+1)^m)
+n-i=g(k_1-k_2)
+\<br>
+\gcd(n,n-i)=g\gcd(k_1,k_1-k_2)=\gcd(k_1,k_2)
+\<br>
+\gcd(n,i)=g\gcd(k_1,k_2)
 $$</p>
-<p>$$
-(n-2)!\left(\prod_{j=1}^n a_j\right)\sum_{i=1}^n\sum_{\sum k_j=n-2}\frac{a_i^{k_i}(k_i+1)^{2m}}{k_i!}\prod_{j\neq i}\frac{a_j^{k_j}(k_j+1)^m}{k_j!}
-$$</p>
-<p>设</p>
-<p>$$
-\begin{aligned}
-\left[{z^n}\right]F_i(z)&amp;=\frac{a_i^n(n+1)^{2m}}{n!}
-\\<br>
-\left[{z^n}\right]G_i(z)&amp;=\frac{a_i^n(n+1)^m}{n!}
-\end{aligned}
-$$</p>
-<p>将非常数项写成卷积形式</p>
-<p>$$
-\left[{z^{n-2}}\right]\sum_{i=1}^n\frac{F_i(z)}{G_i(z)}\left(\prod_{i=1}^nG_i(z)\right)
-$$</p>
-<p>问题变为快速求解这个卷积。设</p>
-<p>$$
-F(z)=\sum_{n=0} \frac{(n+1)^{2m}}{n!}z^n,G(z)=\sum_{n=0}\frac{(n+1)^m}{n!}z^n
-$$</p>
-<p>则有</p>
-<p>$$
-F_i(z)=F(a_iz),G_i(z)=G(a_iz)
-$$</p>
-<p>现在需要考虑对于任意</p>
-<p>$$
-H_i(z)=\sum_{n=0}a_i^nh_nz^n=\frac{1}{1-a_iz}
-$$</p>
-<p>求解</p>
-<p>$$
-\begin{aligned}
-\sum_{i=1}^n H_i(z)=\sum_{i=1}^n\frac{1}{1-a_iz}
-\end{aligned}
-$$</p>
-<p>因为连乘项是 $H_i(z)=\ln G(a_iz)$ 并且 $\exp$ 回原式，而连加项其实是 $H_i(z)=\frac{F(a_iz)}{G(a_iz)}$。对于这两部分都只需要求一遍 $\ln G(z)$ 和 $\frac{F(z)}{G(z)}$。</p>
-<p>设</p>
-<p>$$
-u=\prod_{i=1}^n (1-a_iz)
-$$</p>
-<p>则所求变为</p>
-<p>$$
-\frac{u'}{u}
-$$</p>
-<p>使用分治 $\mathrm{NTT}$ 求出 $u$ 的值即可，时间复杂度为 $O(n \log^2 n)$</p>
 
-                    
-                    <HR width="100%" id="EOF">
-		    <p style="color:#777;">最后修改于 2021-08-08</p>
                     
                 </div>
             </div>
@@ -470,14 +432,14 @@ $$</p>
             <nav class="post-pagination">
 
                 
-                <a class="newer-posts" href="https://tommy0103.github.io/about/">
-			下回<br>About
+                <a class="newer-posts" href="https://tommy0103.github.io/posts/first/">
+			下回<br>简单多项式
                 </a>
                 
                 
                 
-                <a class="older-posts" href="https://tommy0103.github.io/posts/gcd_palindrome/">
-			上回<br>
+                <a class="older-posts">
+			上回<br>这是最旧的文章了。
                 </a>
                 
             </nav>
